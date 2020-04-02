@@ -1,4 +1,58 @@
-p {
-  background: red; }
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif; }
+
+.card, .image, img, .title, .body {
+  width: 100%;
+  transition: 1s ease-in;
+  text-align: center; }
+
+.card {
+  width: 350px;
+  height: 200px;
+  overflow: hidden;
+  position: relative; }
+  .card .title, .card .body, .card .button {
+    margin-top: 200px;
+    opacity: 0; }
+  .card:hover .title, .card:hover .body, .card:hover .button {
+    opacity: 1; }
+  .card:hover .image {
+    width: 50%;
+    height: 80px;
+    text-align: left; }
+    .card:hover .image img {
+      position: absolute;
+      top: 0;
+      border-radius: 0% 0% 0% 100%; }
+  .card:hover .title {
+    transition: 1s ease-in 1s;
+    margin: 5px 5px; }
+    .card:hover .title h6 {
+      font-size: 0.8em;
+      color: #464646; }
+  .card:hover .body {
+    transition: 1s ease-in 1.3s;
+    margin: 5px 5px; }
+    .card:hover .body .body-text {
+      font-size: 0.7em;
+      color: #888; }
+  .card:hover .button {
+    transition: 1s ease-in 1.5s;
+    margin: 5px 5px; }
+    .card:hover .button .button-text {
+      font-size: 0.7em;
+      padding: 1.5px 6px;
+      background: transparent;
+      border: 1px solid #000;
+      border-radius: 3px; }
+      .card:hover .button .button-text:hover {
+        border-radius: 0px;
+        cursor: pointer;
+        padding: 2px 7px; }
+  .card .image {
+    position: relative;
+    margin: 0 0 auto auto; }
 
 /*# sourceMappingURL=index.css.map */

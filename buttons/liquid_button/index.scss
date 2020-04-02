@@ -1,0 +1,98 @@
+$button-width: 200px;
+@mixin keyframes($animation-name) {
+	@-webkit-keyframes #{$animation-name} {
+		@content;
+	}
+	@-moz-keyframes #{$animation-name} {
+		@content;
+	}
+	@-ms-keyframes #{$animation-name} {
+		@content;
+	}
+	@-o-keyframes #{$animation-name} {
+		@content;
+	}
+	@keyframes #{$animation-name} {
+		@content;
+	}
+}
+@mixin animation($str) {
+	-webkit-animation: #{$str};
+	-moz-animation: #{$str};
+	-ms-animation: #{$str};
+	animation: #{$str};
+}
+
+
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: consolas;
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: #0c0c0c;
+}
+
+.liquid-button {
+	position: relative;
+	padding: 20px 50px;
+	display: block;
+	text-decoration: none;
+	text-transform: uppercase;
+	width: $button-width;
+	overflow: hidden;
+	span {
+		position: relative;
+		z-index: 1;
+		color: #fff;
+		font-size: 20px;
+		letter-spacing: 10px;
+	}
+	&:hover .liquid{
+		top: -120px;
+	}
+	.liquid {
+		position: absolute;
+		left: 0;
+		top: -80px;
+		width: $button-width;
+		height: $button-width;
+		background: #4973ff;
+		box-shadow: inset 0 0 50px rgba(0,0,0,0.5);
+		transition: 0.5s;
+		&:before, &:after {
+			content: '';
+			position: absolute;
+			width: 200%;
+			height: 200%;
+			top: 0;
+			left: 50%;
+			transform: translate(-50%, -75%);
+		}
+		&:before {
+			border-radius: 45%;
+			background: rgba(20,20,20,1);
+			@include animation('liquidize 5s linear infinite');
+		}
+		&:after {
+			border-radius: 40%;
+			background: rgba(20,20,20,0.5);
+			@include animation('liquidize 10s linear infinite');
+		}
+	}
+}
+
+@include keyframes(liquidize) {
+	0% {
+		transform: translate(-50%, -75%) rotate(0deg);
+	}
+	100% {
+		transform: translate(-50%, -75%) rotate(360deg);
+	}
+}

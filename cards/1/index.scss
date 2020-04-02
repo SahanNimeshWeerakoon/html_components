@@ -1,3 +1,92 @@
-p {
-	background: red;
+$below-ele-margin: 5px 5px;
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+.card, .image, img, .title, .body {
+	width: 100%;
+	transition: 1s ease-in;
+	text-align: center;
+}
+.card {
+	width: 350px;
+	height: 200px;
+	overflow: hidden;
+	position: relative;
+	.title, .body, .button {
+		margin-top: 200px;
+		opacity: 0;
+	}
+	&:hover {
+		.title, .body, .button {
+			opacity: 1;
+		}
+		.image {
+			width: 50%;
+			height: 80px;
+			text-align: left;
+			img {
+				position: absolute;
+				top: 0;
+				border-radius: 0% 0% 0% 100%;
+			}
+		}
+		.title {
+			transition: 1s ease-in 1s;
+			margin: $below-ele-margin;
+			h6 {
+				font-size: 0.8em;
+				color: #464646;
+			}
+		}
+		.body {
+			transition: 1s ease-in 1.3s;
+			margin: $below-ele-margin;
+			.body-text {
+				font-size: 0.7em;
+				color: #888;
+			}
+		}
+		.button {
+			transition: 1s ease-in 1.5s;
+			margin: $below-ele-margin;
+			.button-text {
+				font-size: 0.7em;
+				padding: 1.5px 6px;
+				background: transparent;
+				border: 1px solid #000;
+				border-radius: 3px;
+				&:hover {
+					border-radius: 0px;
+					cursor: pointer;
+					padding: 2px 7px;
+				}
+			}
+		}
+	}
+	.image {
+		position: relative;
+		margin: 0 0 auto auto;
+		img {
+
+		}
+	}
+	.title {
+		
+		h6 {
+			
+		}
+	}
+	.body {
+		
+		.body-text {
+			
+		}
+	}
+	.button {
+		.button-text {
+		}
+	}
 }
