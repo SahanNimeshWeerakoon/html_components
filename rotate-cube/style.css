@@ -1,0 +1,45 @@
+body {
+  background: #ddd; }
+  body .wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    perspective: 1500px; }
+    body .wrapper .box-area {
+      position: relative;
+      transform-style: preserve-3d;
+      animation-name: rotate;
+      animation-duration: 30s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      transform: rotateX(90deg) rotateY(90deg); }
+      body .wrapper .box-area .box {
+        position: absolute;
+        width: 400px;
+        height: 400px; }
+        body .wrapper .box-area .box.box-front {
+          transform: translateX(-200px) translateY(-200px) translateZ(200px);
+          background: rgba(255, 16, 107, 0.5); }
+        body .wrapper .box-area .box.box-back {
+          transform: translateX(-200px) translateY(-200px) translateZ(-200px);
+          background: rgba(1, 251, 236, 0.5); }
+        body .wrapper .box-area .box.box-right {
+          transform: translateY(-200px) translateX(-400px) rotateY(90deg);
+          background: rgba(4, 255, 116, 0.5); }
+        body .wrapper .box-area .box.box-left {
+          transform: translateY(-200px) rotateY(90deg);
+          background: rgba(216, 255, 0, 0.5); }
+        body .wrapper .box-area .box.box-bottom {
+          transform: translateX(-200px) rotateX(90deg);
+          background: rgba(255, 30, 0, 0.5); }
+        body .wrapper .box-area .box.box-top {
+          transform: translateX(-200px) translateY(-400px) rotateX(90deg);
+          background: rgba(0, 6, 246, 0.5); }
+
+@keyframes rotate {
+  0% {
+    transform: rotate3d(0, 0, 0, 0); }
+  100% {
+    transform: rotate3d(0, 1, 0, -360deg); } }
+
+/*# sourceMappingURL=style.css.map */

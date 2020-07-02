@@ -1,0 +1,57 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif; }
+
+.log-reg-form {
+  width: 50%;
+  height: 500px;
+  background: red;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px; }
+  .log-reg-form .log-reg-switch {
+    width: 50%;
+    border-radius: 12.5px;
+    height: 25px;
+    background: white;
+    position: relative;
+    margin: 10px auto; }
+    .log-reg-form .log-reg-switch .log-reg-bg-color {
+      width: 50%;
+      height: 25px;
+      border-radius: 12.5px;
+      background: green;
+      position: absolute;
+      left: 0;
+      z-index: 1; }
+    .log-reg-form .log-reg-switch .log-reg-text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 2;
+      border-radius: 12.5px;
+      display: flex;
+      margin: 0; }
+      .log-reg-form .log-reg-switch .log-reg-text p {
+        margin: 0;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+  .log-reg-form .login, .log-reg-form .register {
+    position: absolute;
+    width: 100%;
+    background: blue;
+    height: 100%; }
+  .log-reg-form .register {
+    margin-left: 100%; }
+
+/*# sourceMappingURL=style.css.map */

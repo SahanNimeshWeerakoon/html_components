@@ -1,0 +1,64 @@
+$switch-height: 25px;
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+.log-reg-form {
+	width: 50%;
+	height: 500px;
+	background: red;
+	position: relative;
+	overflow: hidden;
+	border-radius: 5px;
+	.log-reg-switch {
+		width: 50%;
+		border-radius: $switch-height/2;
+		height: $switch-height;
+		background: white;
+		position: relative;
+		margin: 10px auto;
+		.log-reg-bg-color {
+			width: 50%;
+			height: $switch-height;
+			border-radius: $switch-height/2;
+			background: green;
+			position: absolute;
+			left: 0;
+			z-index: 1;
+		}
+		.log-reg-text {
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			z-index: 2;
+			border-radius: $switch-height/2;
+			display: flex;
+			margin: 0;
+			p {
+				margin: 0;
+				width: 50%;
+				height: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+		}
+	}
+	.login, .register {
+		position: absolute;
+		width: 100%;
+		background: blue;
+		height: 100%;
+	}
+	.register {
+		margin-left: 100%;
+	}
+}
