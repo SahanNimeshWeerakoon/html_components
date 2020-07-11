@@ -1,0 +1,41 @@
+body {
+  background: #4e9bfa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; }
+  body .container {
+    width: 250px;
+    height: 350px;
+    background: #2e517d;
+    position: relative;
+    perspective: 1000px;
+    transition: all .5s ease-in; }
+    body .container .cover {
+      width: 210px;
+      height: 100%;
+      position: absolute;
+      left: 40px;
+      background: #345b8c;
+      transform-style: preserve-3d;
+      transform-origin: left;
+      transform: rotateY(-20deg);
+      transition: all .5s ease-in; }
+      body .container .cover figure {
+        margin: 0;
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden; }
+        body .container .cover figure.front {
+          background: red; }
+        body .container .cover figure.back {
+          background: green;
+          transform: rotateY(180deg); }
+    body .container:hover {
+      transform: rotateZ(-10deg); }
+      body .container:hover .cover {
+        transform: rotateY(-180deg); }
+
+/*# sourceMappingURL=style.css.map */
